@@ -1,0 +1,13 @@
+{
+    "name": "thisispiers/php-redis-implementation",
+    "description": "Raw wrapper for real Redis fans",
+    "license": "MIT",
+    "require": {
+        "php": ">=8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ziogas\\Redis\\": ""
+        }
+    }
+}

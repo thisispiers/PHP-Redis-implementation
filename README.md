@@ -1,4 +1,4 @@
-PHP Redis implementation V2.1
+PHP Redis implementation
 ==============
 Yet another php redis implementation.
 Raw wrapper for real [Redis] fans. Main advantages:
@@ -12,49 +12,20 @@ Raw wrapper for real [Redis] fans. Main advantages:
 * Dead Simple and lightweight, you're welcome to read all the 300+ lines of redis.php
 * Forces you to actually learn and understand redis data structures and commands.
 
+**This fork makes it compatible with Composer and adds a minimal library for PHP 8 type checking.**
+
 ## Download
 You can checkout latest version with:
 
-    $ git clone git://github.com/ziogas/PHP-Redis-implementation
+    $ git clone git://github.com/thisispiers/PHP-Redis-implementation
 
 
 ## Install
 To install PHP redis:
 
-* Simply copy redis.php to your site and require it from external script
-
-Here are some examples:
-
-```php
-require 'redis.php';
-
-function redis_error($error) {
-    throw new error($error);
-}
-
-$redis = new redis_cli ();
-$redis->set_error_function('redis_error');
-
-$redis->cmd('SET', 'foo', 'bar')
-      ->cmd('HSET', 'hash', 'field', 'val')
-      ->cmd('EXPIRE', 'foo', 300)
-      ->set();
-
-$foo = $redis->cmd('GET', 'foo')->get();
-$field = $redis->cmd('HGET', 'hash', 'field')->get();
-
-var_dump($foo);
-var_dump($field);
 ```
-
-More usage examples can be found on tests folder.
-For commands documentation just go directly to [https://redis.io/commands]
-
-## Running tests
-To run tests you'll need [phpunit]
-
-Execute:
-    ```phpunit tests/*```
+composer require thisispiers/php-redis-implementation
+```
 
 ## Contributing
 
@@ -66,6 +37,7 @@ Execute:
 
 ## Author
 Arminas Zukauskas - arminas@ini.lt
+thisispiers
 
 *Based on http://redis.io/topics/protocol*
 
