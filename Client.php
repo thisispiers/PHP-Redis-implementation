@@ -36,6 +36,7 @@ class Client
 
     public function connect(
         ?string $socket_address = null,
+        #[\SensitiveParameter]
         ?string $password = null,
         ?int $timeout = null,
         ?int $connect_timeout = null
